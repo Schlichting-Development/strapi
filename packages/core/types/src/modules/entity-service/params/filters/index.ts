@@ -141,7 +141,7 @@ type NestedAttributeCondition<
   Utils.Guard.Never<Attribute.GetTarget<TSchemaUID, TAttributeName>, Common.UID.Schema>
 >;
 
-type AbstractAttributesFiltering<TSchemaUID extends Common.UID.Schema> = {
+export type AbstractAttributesFiltering<TSchemaUID extends Common.UID.Schema> = {
   [TKey in string]?:
     | AttributeCondition<TSchemaUID, never>
     | NestedAttributeCondition<TSchemaUID, never>;
